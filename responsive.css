@@ -1,0 +1,60 @@
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        padding: 8px 16px;
+    }
+
+    #about, #services, #strategy, #portfolio, #contact {
+        padding: 20px;
+    }
+}
+
+/* Responsive for Tablets */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+    }
+}
