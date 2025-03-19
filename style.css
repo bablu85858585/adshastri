@@ -13,6 +13,7 @@
 body {
     background-color: #ffffff;
     color: #333;
+    padding-top: 90px; /* Navbar ki height ke hisaab se halka adjust */
 }
 
 /* Navbar */
@@ -63,7 +64,8 @@ body {
     justify-content: center;
     text-align: center;
     padding: 20px;
-    position: relative; /* ओवरले के लिए */
+    position: relative;
+    padding-top: 110px; /* Navbar aur overlay ke overlap ko fix karne ke liye halka adjust */
 }
 
 .hero::before {
@@ -73,7 +75,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* सेमी-ट्रांसपेरेंट ब्लैक ओवरले */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -86,7 +88,7 @@ body {
     font-size: 3rem;
     font-weight: 700;
     animation: fadeIn 1s ease-in-out;
-    color: white; /* फ़ॉन्ट कलर सफेद में बदला गया */
+    color: white;
 }
 
 .hero-subtitle {
@@ -115,7 +117,7 @@ body {
 /* Contact Section */
 #contact {
     position: relative;
-    background-image: url('images/contact-bg.jpg');  /* Update this path if needed */
+    background-image: url('images/contact-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -130,13 +132,13 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 1; /* Make sure the overlay stays behind the text */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 #contact h1, #contact p {
-    position: relative; /* Make sure the text stays above the overlay */
-    z-index: 2;  /* Text appears on top of the overlay */
+    position: relative;
+    z-index: 2;
 }
 
 /* Contact Form */
@@ -144,7 +146,7 @@ body {
     max-width: 600px;
     margin: 20px auto;
     text-align: left;
-    background-color: rgba(0, 0, 0, 0.8);  /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 30px;
     border-radius: 8px;
     z-index: 2;
@@ -155,7 +157,7 @@ body {
     font-weight: bold;
     margin-bottom: 10px;
     display: block;
-    color: white;  /* Ensure label text is visible */
+    color: white;
 }
 
 .contact-form input, .contact-form textarea {
@@ -165,16 +167,15 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
-    background-color: #fff;  /* Set background to white */
-    color: #333; /* Dark text color */
+    background-color: #fff;
+    color: #333;
     transition: border-color 0.3s ease;
 }
 
-/* Focus Styling for Inputs and Textareas */
 .contact-form input:focus, .contact-form textarea:focus {
-    border-color: #ff6634; /* Border color changes on focus */
-    outline: none; /* Remove default outline */
-    background-color: #fff; /* Clear background when focused */
+    border-color: #ff6634;
+    outline: none;
+    background-color: #fff;
 }
 
 .contact-form button {
@@ -198,16 +199,21 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 /* Lottie Animation Styling */
 #lottie-container {
-    width: 100%; /* Animation ko full width mein fit karo */
-    max-width: 100%; /* Make sure it's not bigger than its container */
-    height: auto; /* Auto adjust the height */
-    position: absolute; /* Animation ko header ke niche rakhne ke liye */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* Isse animation text ke peeche chale jayega */
+    z-index: -1;
+}
+
+/* Content Section */
+.content {
+    min-height: calc(100vh - 90px - 50px); /* Header + Footer ki height adjust karein */
 }
