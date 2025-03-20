@@ -114,6 +114,66 @@ body {
     color: white;
 }
 
+/* Blog Post Section */
+.blog-posts {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.post img {
+    width: 45%;
+    max-height: 80vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.post-content {
+    width: 50%;
+    text-align: left;
+}
+
+.post h3 {
+    font-size: 2rem;
+    color: #ff6634;
+    margin-bottom: 10px;
+}
+
+.post p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Alternating layout */
+.post:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Smooth Scroll Effect */
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.post {
+    scroll-snap-align: start;
+}
+
 /* Contact Section */
 #contact {
     position: relative;
