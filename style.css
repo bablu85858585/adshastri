@@ -10,6 +10,10 @@
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden; /* Horizontal Scroll Remove */
+}
+
 body {
     background-color: #ffffff;
     color: #333;
@@ -53,7 +57,7 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh; /* Ensure proper height */
     background-image: url('images/hero-banner.jpg');
     background-size: cover;
     background-position: center;
@@ -117,8 +121,9 @@ body {
 /* Blog Post Section */
 .blog-posts {
     width: 100%;
-    overflow: hidden;
     position: relative;
+    overflow-y: visible; /* Extra scrolling remove */
+    margin-top: 50px; /* Extra margin dekar better spacing */
 }
 
 .post {
@@ -126,7 +131,7 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100vw;
-    height: 100vh;
+    min-height: 80vh; /* Post ke height ko adjust karo */
     padding: 50px;
     box-sizing: border-box;
     position: relative;
@@ -159,19 +164,6 @@ body {
 /* Alternating layout */
 .post:nth-child(even) {
     flex-direction: row-reverse;
-}
-
-/* Smooth Scroll Effect */
-.blog-posts {
-    display: flex;
-    flex-direction: column;
-    scroll-snap-type: y mandatory;
-    height: 100vh;
-    overflow-y: scroll;
-}
-
-.post {
-    scroll-snap-align: start;
 }
 
 /* Contact Section */
